@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,7 @@ public class mensajes {
     private String destinatario;
     private LocalDateTime create_at;
     private String contenido;
+    @ManyToOne
     @JoinColumn(name = " usuario_ID")
     private Usuario usuario;
 }
